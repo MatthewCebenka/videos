@@ -4,7 +4,7 @@ import Loader from "react-loader-spinner";
 
 const VideoDetail = ({ video }) => {
   if (!video) {
-    return <a href='https://github.com/MatthewCebenka/videos/tree/master'>Github Repo</a>;
+    return <a href='https://github.com/MatthewCebenka'>My Github</a>;
   }
   return (
     <div>
