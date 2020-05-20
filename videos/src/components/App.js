@@ -3,10 +3,11 @@ import SearchBar from "./SearchBar";
 import youtube from '../apis/youtube'
 
 class App extends React.Component {
+    state = { videos: [] }
     
-    onTermSubmit = (searchTerm) => {
+    onTermSubmit = async (searchTerm) => {
         const API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
-        youtube.get('/search', {
+       const response = await youtube.get('/search', {
             params: {
                 q: searchTerm,
                 part: 'snippet',
@@ -14,6 +15,7 @@ class App extends React.Component {
                 key: API_KEY
             }
         });
+        this.setState({ videos: response.data.items })
     };
 
 
