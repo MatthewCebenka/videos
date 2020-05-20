@@ -28,7 +28,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="ui container">
-        <h1>Youtube Video Search</h1>
+        <h1>Youtube Search</h1>
         <SearchBar onTermSubmit={this.onTermSubmit} />
         <VideoDetail video={this.state.selectedVideo} />
         <VideoList
