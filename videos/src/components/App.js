@@ -20,9 +20,11 @@ class App extends React.Component {
     };
 
     onVideoSelect = (video) => {
-        console.log('From the App!', video);
+        this.setState({ selectedVideo: video});
+        console.log(this.state.selectedVideo)
     }
-
+    
+    
   render() {
     return (
       <div className='ui container'>
