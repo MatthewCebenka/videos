@@ -1,6 +1,6 @@
 import React from 'react';
 
-const VideoItem = () => {
+const VideoItem = (props) => {
     return (
         <div>
             <h1>Video Item component.</h1>
