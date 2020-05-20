@@ -7,3 +7,5 @@ const VideoList = (props) => {
         </div>
     )
 }
+
+export default VideoList;
