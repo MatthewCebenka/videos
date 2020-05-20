@@ -5,7 +5,7 @@ const VideoItem = (props) => {
   const title = props.video.snippet.title;
   const image = props.video.snippet.thumbnails.medium.url;
   return (
-    <div className="item">
+    <div className="video-item item">
       <img className="ui image" src={image} />
       <div className='content'>
         <div className='header' >{title}</div>
