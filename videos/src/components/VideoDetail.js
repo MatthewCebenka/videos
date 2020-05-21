@@ -1,13 +1,17 @@
-import React, {Link} from "react";
+import React from "react";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import Loader from "react-loader-spinner";
 
 const VideoDetail = ({ video }) => {
   if (!video) {
-    return <a href='https://github.com/MatthewCebenka'>My Github</a>;
+    return <a href="https://github.com/MatthewCebenka">My Github</a>;
   }
+  const videoSrc = `https://www.youtube.com/embed/${video.id.videoId}`;
   return (
     <div>
+      <div className="ui embed">
+        <iframe src={videoSrc} />
+      </div>
       <div className="ui segment">
         <h4 className="ui header">{video.snippet.title}</h4>
         <p>{video.snippet.description}</p>
