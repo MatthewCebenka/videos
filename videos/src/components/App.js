@@ -7,6 +7,10 @@ import youtube from "../apis/youtube";
 class App extends React.Component {
   state = { videos: [], selectedVideo: null };
 
+    componentDidMount(){
+        this.onTermSubmit('trending')
+    }
+
   onTermSubmit = async (searchTerm) => {
     const API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
     const response = await youtube.get("/search", {
