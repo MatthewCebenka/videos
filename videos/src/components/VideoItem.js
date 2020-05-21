@@ -11,7 +11,7 @@ const VideoItem = (props) => {
         props.onVideoSelect(props.video);
       }}
     >
-      <img className="ui image" src={image} />
+      <img className="ui image" alt={title} src={image} />
       <div className="content">
         <div className="header">{title}</div>
       </div>
